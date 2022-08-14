@@ -1,0 +1,23 @@
+@use "../abstracts" as *;
+
+.nav {
+  max-height: 5rem;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  &__container{
+    display: flex;
+    justify-content: space-between;
+  }
+  .hamburger {
+    min-width: 24px;
+    align-self: center;
+    justify-self: end;
+  }
+  &__links {
+    color: $color-white;
+    width: fit-content;
+    @extend %flex-column;
+    gap: 1.3rem;
+  }
+}

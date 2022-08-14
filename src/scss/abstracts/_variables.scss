@@ -1,0 +1,26 @@
+//COLORS
+$color-white: hsl(0, 0%, 100%); 
+$color-black: hsl(0, 0%, 0%);
+$color-darkGray: hsl(0, 0%, 55%); 
+$color-veryDarkGray: hsl(0, 0%, 41%);
+
+
+//TYPOGRAPHY
+$fs-primary: 0.9375rem; // 15px
+$ff-primary: "Alata", sans-serif;
+$ff-secondary: 'Josefin Sans', cursive;
+$fw-primary: 400;
+$fw-secondary: 300;
+
+//TRANSITIONS
+
+//BREAKPOINTS
+
+$breakpoints: (
+    xsmall: 22em,
+    small: 36em,
+    medium: 48em,
+    large: 62em,
+    xlarge: 75em,
+    xxlarge: 93em,
+)

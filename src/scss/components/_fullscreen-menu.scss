@@ -1,0 +1,47 @@
+@use "../abstracts" as *;
+
+
+//FULLSCREEN MENU
+
+.fullscreen-menu{
+  align-items: center;
+  display: grid;
+  position: fixed;
+  left: 0;
+  bottom: -200%;
+  color: white;
+  text-transform: uppercase;
+  width: 100%;
+  transition: ease-in-out 0.9s;
+  z-index: 100;
+  font-size: 24px;
+  height: 100vh;
+  &__list {
+    margin-left: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    @media screen and (min-width: 36em){
+      justify-self: center;
+    }
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    width: 100%;
+    margin-top: 1.9rem;
+    position: absolute;
+    top: 0;
+  }
+}
+
+.fullscreen-menu.active,
+.fullscreen-menu--light.active {
+  bottom: 0;
+}
+
+.fullscreen-menu.active {
+  background-color: #000;
+}
+

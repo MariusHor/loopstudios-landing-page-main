@@ -1,0 +1,18 @@
+@use "../abstracts" as *;
+
+a, a:visited {
+  color: inherit;
+  cursor: pointer;
+}
+
+a:hover {
+  color: $color-darkGray;
+  transition: 0.3s ease-in-out;
+}
+
+a:focus {
+  outline-color: $color-black;
+  outline-offset: 0.2rem;
+  outline-style: dotted;
+  outline-width: 0.15rem;
+}

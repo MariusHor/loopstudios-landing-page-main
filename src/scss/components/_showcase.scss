@@ -1,0 +1,12 @@
+@use "../abstracts" as *;
+
+.showcase {
+    margin: 6rem 0;
+    &__container {
+        @extend %center;
+        gap: 3rem;
+    }
+   &__img {
+        height: auto;
+    }
+}

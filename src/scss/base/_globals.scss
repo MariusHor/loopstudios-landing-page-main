@@ -1,0 +1,9 @@
+@use "../abstracts" as *;
+
+body {
+    font-family: $ff-primary;
+    font-size: $fs-primary;
+    min-width: fit-content;
+}
+
+

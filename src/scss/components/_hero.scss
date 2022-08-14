@@ -1,0 +1,28 @@
+@use "../abstracts" as *;
+
+.hero {
+  color: white;
+  display: grid;
+
+  &__title {
+    border: solid 1px;
+    padding: 1.5rem;
+    font-size: 30px;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-family: $ff-secondary;
+    max-width: 41rem;
+    @include breakpoint(xsmall) {
+      font-size: 40px;
+    }
+    @include breakpoint(medium) {
+      font-size: 55px;
+      padding: 2rem;
+    }
+    @include breakpoint(xlarge) {
+      font-size: 72px;
+      padding: 2.5rem;
+    }
+    height: fit-content;
+  }
+}
