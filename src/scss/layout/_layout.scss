@@ -3,7 +3,7 @@
 //CONTAINERS
 
 .s-container {
-    width: clamp(16rem, 87vw, 90rem);
+    width: clamp(16rem, 87vw, 85rem);
     margin-left: auto;
     margin-right: auto;
 }
@@ -16,11 +16,15 @@
     display: grid;
     grid-template-rows: 1fr 2fr;
     min-height: 100vh;
+    min-width: min-content;
     @include breakpoint(medium) {
         background: linear-gradient(to left bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(/src/img/desktop/image-hero.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-      }
-    min-width: min-content;
-    padding: 0 1.5rem;
+    }
+
+}
+
+.overflow-hidden {
+    overflow: hidden;
 }

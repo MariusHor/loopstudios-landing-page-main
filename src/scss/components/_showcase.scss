@@ -2,11 +2,43 @@
 
 .showcase {
     margin: 6rem 0;
+    @include breakpoint(xlarge) {
+        margin: 6rem 0 10rem;
+    }
     &__container {
         @extend %center;
         gap: 3rem;
+        position: relative;
+        place-items: center;
+        @include breakpoint(medium) {
+            max-width: 1070px;
+        }
+    }
+    &__info {
+        @include breakpoint(xlarge) {
+            max-width: 650px;
+            position: absolute;
+            background: $color-white;
+            padding: 5rem;
+            text-align: start;
+            right: 0;
+            bottom: 0;
+            transform: translate(15%, 30%);
+        }
+    }
+    .section-title {
+        margin-bottom: 25px;
+        @include breakpoint(xlarge) {
+            padding-right: 1.2rem;
+            text-align: start;
+        }
     }
    &__img {
         height: auto;
+    }
+    &__img-wrapper {
+        @include breakpoint(xlarge) {
+            place-self: baseline;
+        }
     }
 }

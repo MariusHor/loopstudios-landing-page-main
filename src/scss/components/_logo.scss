@@ -1,6 +1,18 @@
 @use "../abstracts" as *;
 
 .logo {
-    max-width: 144px;
+  width: fit-content;
+  &__img {
+    max-width: 150px;
     height: auto;
+    @include breakpoint(small) {
+      max-width: 165px;
   }
+    @include breakpoint(medium) {
+      max-width: 175px;
+  }
+  @include breakpoint(large) {
+    max-width: 192px;
+}
+  }
+}

@@ -6,13 +6,25 @@
     &__container {
         @extend %flex-column;
         gap: 3rem;
+        @include breakpoint(medium) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
     }
     &__right, &__left {
-        @extend %center
+        @extend %center;
+        @include breakpoint(medium) {
+            place-items: initial;
+        }
     }
     &__right {
         @extend %flex-column;
         gap: 1rem;
+        @include breakpoint(medium) {
+            display: grid;
+            align-items: center;
+            justify-items: end;
+        }
     }
     &__left {
         @extend %flex-column;
@@ -26,5 +38,11 @@
         width: fit-content;
         display: flex;
         gap: 1rem;
+    }
+    .nav__links {
+        @include breakpoint(medium) {
+            flex-direction: row;
+        }
+
     }
 }
