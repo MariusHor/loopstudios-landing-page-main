@@ -1,7 +1,7 @@
 @use "../abstracts" as *;
 
 .portfolio {
-    margin: 2rem 0 6rem;
+    margin: 2rem 0 8rem;
     max-width: 1070px;
     display: grid;
     gap: 4rem;
@@ -10,6 +10,7 @@
     "projects"
     "button";
     @include breakpoint(medium) {
+        margin: 2rem 0 10rem;
         grid-template-areas: 
         "title button"
         "projects projects"
@@ -38,7 +39,7 @@
         width: fit-content;
         margin: 0 auto;
         border: solid 1px $color-darkGray;
-        padding: 0.5rem 2.5rem;
+        padding: 0.9rem 2.3rem;
         transition: 0.4s ease-in-out;
         display: flex;
         align-items: center;
