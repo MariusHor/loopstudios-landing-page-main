@@ -1,13 +1,17 @@
 @use "../abstracts" as *;
 
 .project {
-    max-width: 500px;
+    transition: 0.3s ease-in-out cubic-bezier(0.975, 0.885, 0.92, 1.675);
+    opacity: 0;
+    transform: translateY(50%);
+    width: 100%;
+    margin: 0 auto;
     position: relative;
     padding: 4rem 0 2rem 1.5rem;
     border-radius: 0.3rem;
     overflow: hidden;
     box-shadow: rgb(38, 57, 77) 0px 20px 10px -10px;
-    @include breakpoint(medium) {
+    @include breakpoint(large) {
         height: 450px;
         max-width: 256px;
     }
@@ -24,56 +28,56 @@
     &__bckg--earth {
         background: linear-gradient(to left bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(/src/img/mobile/image-deep-earth.jpg);
         background-size: cover;
-        @include breakpoint(medium) {
+        @include breakpoint(large) {
             background: linear-gradient(to left bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(/src/img/desktop/image-deep-earth.jpg) no-repeat;
         }
     }
     &__bckg--arcade {
         background: linear-gradient(to left bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(/src/img/mobile/image-night-arcade.jpg);
         background-size: cover;
-        @include breakpoint(medium) {
+        @include breakpoint(large) {
             background: linear-gradient(to left bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(/src/img/desktop/image-night-arcade.jpg);
         }
     }
     &__bckg--soccer {
         background: linear-gradient(to left bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(/src/img/mobile/image-soccer-team.jpg);
         background-size: cover;
-        @include breakpoint(medium) {
+        @include breakpoint(large) {
             background: linear-gradient(to left bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(/src/img/desktop/image-soccer-team.jpg);
         }
     }
     &__bckg--grid {
         background: linear-gradient(to left bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(/src/img/mobile/image-grid.jpg);
         background-size: cover;
-        @include breakpoint(medium) {
+        @include breakpoint(large) {
             background: linear-gradient(to left bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(/src/img/desktop/image-grid.jpg);
         }
     }
     &__bckg--above {
         background: linear-gradient(to left bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(/src/img/mobile/image-from-above.jpg);
         background-size: cover;
-        @include breakpoint(medium) {
+        @include breakpoint(large) {
             background: linear-gradient(to left bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(/src/img/desktop/image-from-above.jpg);
         }
     }
     &__bckg--borealis {
         background: linear-gradient(to left bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(/src/img/mobile/image-pocket-borealis.jpg);
         background-size: cover;
-        @include breakpoint(medium) {
+        @include breakpoint(large) {
             background: linear-gradient(to left bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(/src/img/desktop/image-pocket-borealis.jpg);
         }
     }
     &__bckg--curiosity {
         background: linear-gradient(to left bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(/src/img/mobile/image-curiosity.jpg);
         background-size: cover;
-        @include breakpoint(medium) {
+        @include breakpoint(large) {
             background: linear-gradient(to left bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(/src/img/desktop/image-curiosity.jpg);
         }
     }
     &__bckg--fisheye {
         background: linear-gradient(to left bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(/src/img/mobile/image-fisheye.jpg);
         background-size: cover;
-        @include breakpoint(medium) {
+        @include breakpoint(large) {
             background: linear-gradient(to left bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(/src/img/desktop/image-fisheye.jpg);
         }
     }
@@ -93,11 +97,5 @@
     filter: blur(5px);
 }
 
-.project:nth-child(8) {
-    @include breakpoint(medium) {
-        grid-column: 3;
-    }
-    @include breakpoint(large) {
-        grid-column: initial;
-    }
-}
+
+

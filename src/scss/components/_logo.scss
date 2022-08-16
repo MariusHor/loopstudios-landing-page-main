@@ -2,6 +2,7 @@
 
 .logo {
   width: fit-content;
+  z-index: 1000;
   &__img {
     max-width: 150px;
     height: auto;

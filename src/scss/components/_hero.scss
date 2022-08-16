@@ -3,8 +3,13 @@
 .hero {
   color: white;
   display: grid;
+  @include breakpoint(medium) {
+    padding: 2rem 0;
+  }
 
   &__title {
+    transform: translateY(-100%);
+    opacity: 0;
     border: solid 1px;
     padding: 1.5rem;
     font-size: 30px;

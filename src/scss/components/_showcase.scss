@@ -2,17 +2,15 @@
 
 .showcase {
     margin: 6rem 0;
+    @extend %center;
+    gap: 3rem;
+    position: relative;
+    place-items: center;
+    @include breakpoint(medium) {
+        max-width: 1070px;
+    }
     @include breakpoint(xlarge) {
         margin: 6rem 0 10rem;
-    }
-    &__container {
-        @extend %center;
-        gap: 3rem;
-        position: relative;
-        place-items: center;
-        @include breakpoint(medium) {
-            max-width: 1070px;
-        }
     }
     &__info {
         @include breakpoint(xlarge) {
@@ -26,18 +24,36 @@
             transform: translate(15%, 30%);
         }
     }
-    .section-title {
+    &__title {
         margin-bottom: 25px;
+        text-align: center;
+        padding-right: 1rem;
+        @include breakpoint(large) {
+            font-size: 40px !important;
+        }
         @include breakpoint(xlarge) {
             padding-right: 1.2rem;
             text-align: start;
+            font-size: 48px !important;
+        }
+    }
+    &__text {
+        padding: 0 1rem;
+        max-width: 450px;
+        text-align: center;
+        margin: 0 auto;
+        @include breakpoint(xlarge) {
+            text-align: start;
+            padding: 0;
         }
     }
    &__img {
         height: auto;
     }
     &__img-wrapper {
+        max-width: 400px;
         @include breakpoint(xlarge) {
+            max-width: initial;
             place-self: baseline;
         }
     }

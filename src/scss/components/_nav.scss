@@ -23,10 +23,7 @@
     color: $color-white;
     width: fit-content;
     @extend %flex-column;
-    gap: 1.6rem;
-    @media screen and (max-height: 32em) {
-      gap: 1.5rem;
-    }
+    gap: 1.5rem;
   }
 
   &__links--desktop {
@@ -39,36 +36,36 @@
     }
   }
 
-  .fullscreen-menu {
-  @extend %center;
-  flex-direction: column;
-  justify-content: center;
-  gap: 2rem;
-  position: fixed;
-  left: -100%;
-  top: 0;
-  font-weight: $fw-secondary;
-  width: 100%;
-  transition: ease-in-out 0.3s;
-  z-index: 600;
-  height: 100vh;
-  font-size: 1.7rem;
-  text-transform: uppercase;
-  @media screen and (max-height: 32em) {
-    gap: 1rem;
-    font-size: 1.5rem;
-  }
-  &.active {
-    background-color: #000;
-    left: 0;
+  &__links--mobile {
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    position: fixed;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    transition: ease-in-out 0.3s;
+    z-index: 600;
     height: 100vh;
+    text-transform: uppercase;
+    padding-top: 2.5rem;
+    @media screen and (max-height: 32em) {
+      gap: 1rem;
+    }
+    &.active {
+      background-color: #000;
+      left: 0;
+      height: 100vh;
+    }
+    li {
+      font-family: $ff-secondary;
+      font-size: 1.7rem;
+      @media screen and (max-height: 32em) {
+        font-size: 1.5rem;
+      }
+      @include breakpoint(medium) {
+        font-size: 1.9rem;
+      }
+    }
   }
-  li {
-    transition: ease-in-out 0.2s;
-    display: grid;
-    justify-items: center;
-    filter: drop-shadow(0px 0px 7px rgba(1, 1, 1, 0.1));
-    font-family: $ff-secondary;
-  }
-}
 }

@@ -33,6 +33,11 @@
     &__copyright {
         color: $color-darkGray;
         width: fit-content;
+        text-align: center;
+        @include breakpoint(medium) {
+            text-align: initial;
+            align-self: end;
+        }
     }
     &__socials {
         width: fit-content;
@@ -43,6 +48,5 @@
         @include breakpoint(medium) {
             flex-direction: row;
         }
-
     }
 }

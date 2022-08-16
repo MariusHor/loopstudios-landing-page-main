@@ -21,6 +21,8 @@
         background: linear-gradient(to left bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(/src/img/desktop/image-hero.jpg);
         background-repeat: no-repeat;
         background-size: cover;
+        min-height: initial;
+        grid-template-rows: 1fr 2fr 1fr;
     }
 
 }
@@ -28,3 +30,9 @@
 .overflow-hidden {
     overflow: hidden;
 }
+
+.active {
+    transform: translateY(0%);
+    transition: 400ms ease-in;
+    opacity: 1 !important;
+  }
