@@ -17,18 +17,19 @@
     font-weight: 300;
     text-transform: uppercase;
     font-family: $ff-secondary;
-    max-width: 41rem;
+    max-width: 34rem;
+    height: fit-content;
     @include breakpoint(xsmall) {
       font-size: 40px;
+      padding-right: 3rem;
     }
     @include breakpoint(medium) {
-      font-size: 55px;
-      padding: 2rem;
+      max-width: 43rem;
     }
     @include breakpoint(xlarge) {
       font-size: 72px;
       padding: 2.5rem;
     }
-    height: fit-content;
+
   }
 }
