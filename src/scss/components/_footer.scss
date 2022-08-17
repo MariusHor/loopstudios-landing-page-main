@@ -4,31 +4,14 @@
     background: $color-black;
     padding: 4rem 0;
     &__container {
-        @extend %flex-column;
-        gap: 3rem;
-        @include breakpoint(medium) {
-            flex-direction: row;
-            justify-content: space-between;
-        }
-    }
-    &__right, &__left {
-        @extend %center;
-        @include breakpoint(medium) {
-            place-items: initial;
-        }
-    }
-    &__right {
-        @extend %flex-column;
+        display: grid;
+        justify-items: center;
         gap: 1rem;
-        @include breakpoint(medium) {
-            display: grid;
-            align-items: center;
-            justify-items: end;
+        @include breakpoint(large) {
+            grid-template-areas: 
+            "footerlogo socials"
+            "footernav copyright";
         }
-    }
-    &__left {
-        @extend %flex-column;
-        gap: 2rem;
     }
     &__copyright {
         color: $color-darkGray;
@@ -38,15 +21,36 @@
             text-align: initial;
             align-self: end;
         }
+        @include breakpoint(large) {
+            grid-area: copyright;
+            justify-self: end;
+        }
     }
     &__socials {
-        width: fit-content;
         display: flex;
         gap: 1rem;
+        @include breakpoint(large) {
+            grid-area: socials;
+            align-self: end;
+            justify-self: end;
+        }
     }
-    .nav__links {
+    &__nav {
+        margin: 1.5rem 0 2.5rem;
+        text-align: center;
         @include breakpoint(medium) {
             flex-direction: row;
+        }
+        @include breakpoint(large) {
+            margin: 0;
+            grid-area: footernav;
+            justify-self: start;
+        }
+    }
+    &__logo {
+        @include breakpoint(large) {
+            grid-area: footerlogo;
+            justify-self: start;
         }
     }
 }
