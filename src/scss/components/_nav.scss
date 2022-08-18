@@ -26,17 +26,8 @@
     gap: 1.5rem;
   }
 
-  &__links--desktop {
-    display: none;
-    @include breakpoint(large) {
-      display: flex;
-      flex-direction: row;
-      justify-self: end;
-      font-size: 16px;
-    }
-  }
-
-  &__links--mobile {
+  &__menu {
+    display: flex;
     justify-content: center;
     align-items: flex-start;
     gap: 2rem;
@@ -44,11 +35,18 @@
     left: -100%;
     top: 0;
     width: 100%;
-    transition: ease-in-out 0.3s;
     z-index: 600;
     height: 100vh;
     text-transform: uppercase;
     padding-top: 2.5rem;
+    @include breakpoint(large) {
+      flex-direction: row;
+      justify-self: end;
+      height: initial;
+      padding-top: 0;
+      position: initial;
+      justify-content: end;
+    }
     @media screen and (max-height: 32em) {
       gap: 1rem;
     }
@@ -56,15 +54,30 @@
       background-color: #000;
       left: 0;
       height: 100vh;
+      @include breakpoint(large) {
+        background-color: initial;
+        left: 0;
+        height: initial;
+      }
     }
     li {
       font-family: $ff-secondary;
       font-size: 1.7rem;
+      width: clamp(16rem, 87vw, 85rem);
+      margin-left: auto;
+      margin-right: auto;
       @media screen and (max-height: 32em) {
         font-size: 1.5rem;
       }
       @include breakpoint(medium) {
         font-size: 1.9rem;
+      }
+      @include breakpoint(large) {
+        width: initial;
+        margin: initial;
+        font-size: $fs-primary;
+        font-family: $ff-primary;
+        text-transform: initial;
       }
     }
   }

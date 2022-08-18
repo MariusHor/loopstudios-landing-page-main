@@ -1,4 +1,4 @@
-const navMenu = document.querySelector('.nav__links--mobile');
+const navMenu = document.querySelector('.nav__menu');
 const hamburger = document.querySelector('.hamburger');
 const body = document.querySelector('body')
 
