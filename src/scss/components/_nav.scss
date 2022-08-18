@@ -27,7 +27,6 @@
   }
 
   &__menu {
-    display: flex;
     justify-content: center;
     align-items: flex-start;
     gap: 2rem;
@@ -35,29 +34,30 @@
     left: -100%;
     top: 0;
     width: 100%;
+    transition: ease-in-out 0.3s;
     z-index: 600;
     height: 100vh;
     text-transform: uppercase;
-    padding-top: 2.5rem;
+    @media screen and (max-height: 32em) {
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
     @include breakpoint(large) {
+      display: flex;
       flex-direction: row;
       justify-self: end;
       height: initial;
-      padding-top: 0;
+      padding: initial;
       position: initial;
       justify-content: end;
-    }
-    @media screen and (max-height: 32em) {
-      gap: 1rem;
     }
     &.active {
       background-color: #000;
       left: 0;
       height: 100vh;
       @include breakpoint(large) {
-        background-color: initial;
-        left: 0;
         height: initial;
+        background-color: initial;
       }
     }
     li {
@@ -73,12 +73,14 @@
         font-size: 1.9rem;
       }
       @include breakpoint(large) {
+        font-size: 15px;
+        text-transform: initial;
+        font-family: $ff-primary;
         width: initial;
         margin: initial;
-        font-size: $fs-primary;
-        font-family: $ff-primary;
-        text-transform: initial;
       }
     }
   }
 }
+
+

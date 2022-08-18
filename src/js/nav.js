@@ -6,4 +6,4 @@ hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     navMenu.classList.toggle('active');
     body.classList.toggle('overflow-hidden')
-})
+});
