@@ -13,26 +13,10 @@
             "footernav copyright";
         }
     }
-    &__copyright {
-        color: $color-darkGray;
-        width: fit-content;
-        text-align: center;
-        @include breakpoint(medium) {
-            text-align: initial;
-            align-self: end;
-        }
+    &__logo {
         @include breakpoint(large) {
-            grid-area: copyright;
-            justify-self: end;
-        }
-    }
-    &__socials {
-        display: flex;
-        gap: 1rem;
-        @include breakpoint(large) {
-            grid-area: socials;
-            align-self: end;
-            justify-self: end;
+            grid-area: footerlogo;
+            justify-self: start;
         }
     }
     &__menu {
@@ -47,10 +31,29 @@
             justify-self: start;
         }
     }
-    &__logo {
+    &__socials {
+        display: flex;
+        gap: 1rem;
         @include breakpoint(large) {
-            grid-area: footerlogo;
-            justify-self: start;
+            grid-area: socials;
+            align-self: end;
+            justify-self: end;
+        }
+    }
+    &__icon {
+        font-size: 24px;
+    }
+    &__copyright {
+        color: $color-darkGray;
+        width: fit-content;
+        text-align: center;
+        @include breakpoint(medium) {
+            text-align: initial;
+            align-self: end;
+        }
+        @include breakpoint(large) {
+            grid-area: copyright;
+            justify-self: end;
         }
     }
 }

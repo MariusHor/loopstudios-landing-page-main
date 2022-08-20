@@ -9,64 +9,43 @@
   @include breakpoint(large) {
     display: none;
   }
-  &__hamburger:hover {
-    transition: all 0.3s ease-in-out;
+  &:hover  &__bar {
+    background: $color-darkGray;
   }
-
-  &__hamburger:focus {
-    outline: none;
-  }
-
-  &__bar,
-  &__bar--light {
+  &__bar {
+    background: #fff;
     display: block;
     width: 30px;
     height: 3.5px;
     margin: 7px auto;
-    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.72, 1.675);
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.72, 1.675), background $transition-primary;
     border-radius: 5px;
     @include breakpoint(large) {
       width: 35px;
       height: 4px;
+    }
   }
+  &.active &__bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
   }
-
-  &__bar {
-    background-color: #fff;
+  
+  &.active &__bar:nth-child(2) {
+    opacity: 0;
   }
-
-  &__bar--light {
-    background-color: #000;
+  
+  &.active &__bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
   }
-}
-
-.hamburger:hover .hamburger__bar,
-.hamburger:hover .hamburger__bar--light {
-}
-
-
-//BARS TRANSITION
-
-.hamburger.active .hamburger__bar:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
-}
-
-.hamburger.active .hamburger__bar:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active .hamburger__bar:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
-}
-
-.hamburger.active .hamburger__bar--light:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active .hamburger__bar--light:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
-}
-
-.hamburger.active .hamburger__bar--light:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
+  
+  &.active &__bar--light:nth-child(2) {
+    opacity: 0;
+  }
+  
+  &.active &__bar--light:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  &.active &__bar--light:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
 }

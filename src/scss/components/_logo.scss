@@ -8,12 +8,12 @@
     height: auto;
     @include breakpoint(small) {
       max-width: 165px;
-  }
+    }
     @include breakpoint(medium) {
       max-width: 175px;
-  }
-  @include breakpoint(large) {
-    max-width: 192px;
-}
+    }
+    @include breakpoint(large) {
+      max-width: 192px;
+    }
   }
 }

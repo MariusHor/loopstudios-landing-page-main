@@ -1,13 +1,12 @@
 @use "../abstracts" as *;
 
 .hero {
-  color: white;
-  display: grid;
   @include breakpoint(medium) {
     padding: 2rem 0;
   }
-
   &__title {
+    color: $color-white;
+    transition: transform $transition-primary, opacity $transition-primary;
     line-height: 1.2;
     transform: translateY(-100%);
     opacity: 0;
@@ -30,6 +29,5 @@
       font-size: 72px;
       padding: 2.5rem;
     }
-
   }
 }

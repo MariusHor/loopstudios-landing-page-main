@@ -33,6 +33,7 @@
     &__btn {
         grid-area: button;
         justify-self: end;
+        color: $color-black;
         text-transform: uppercase;
         letter-spacing: 4px;
         display: block;
@@ -40,9 +41,7 @@
         margin: 0 auto;
         border: solid 1px $color-darkGray;
         padding: 0.9rem 2.3rem;
-        transition: 0.4s ease-in-out;
-        display: flex;
-        align-items: center;
+        transition: color $transition-primary, background $transition-primary;
         @include breakpoint(medium) {
             margin: 0;
         }
