@@ -31,6 +31,7 @@
         } 
     }
     &__btn {
+        position: relative;
         grid-area: button;
         justify-self: end;
         color: $color-black;
