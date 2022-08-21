@@ -3,11 +3,18 @@
 //HAMBURGER MENU
 
 .hamburger {
+  position: relative;
+  background: none;
+  border: 0;
   cursor: pointer;
   justify-self: end;
   z-index: 1000;
   @include breakpoint(large) {
     display: none;
+  }
+  &:focus, &:focus-visible, &:active {
+    outline-offset: 0.3625rem;
+    outline: 0.15rem dotted $color-white;
   }
   &:hover  &__bar {
     background: $color-darkGray;
@@ -25,27 +32,27 @@
       height: 4px;
     }
   }
-  &.active &__bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-  
   &.active &__bar:nth-child(2) {
-    opacity: 0;
+    transform: translateY(8px) rotate(45deg);
   }
   
   &.active &__bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-  
-  &.active &__bar--light:nth-child(2) {
     opacity: 0;
   }
   
-  &.active &__bar--light:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
+  &.active &__bar:nth-child(4) {
+    transform: translateY(-8px) rotate(-45deg);
   }
   
   &.active &__bar--light:nth-child(3) {
+    opacity: 0;
+  }
+  
+  &.active &__bar--light:nth-child(2) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  &.active &__bar--light:nth-child(4) {
     transform: translateY(-8px) rotate(-45deg);
   }
 }

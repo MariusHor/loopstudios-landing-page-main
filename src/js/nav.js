@@ -8,8 +8,20 @@ hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     navMenu.classList.toggle('active');
     body.classList.toggle('overflow-hidden');
+    setHamburgerMenuState()
     /*addAriaHiddenAttr(mql);*/
 });
+
+function setHamburgerMenuState() {
+    
+    if (navMenu.classList.contains("active")) {
+        hamburger.setAttribute("aria-expanded", "true")
+    } else if (!navMenu.classList.contains("active")) {
+        hamburger.setAttribute("aria-expanded", "false")
+    } 
+}
+ 
+
 
 
 // This was another way to make the menu links accessible
