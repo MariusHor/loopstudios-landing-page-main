@@ -16,6 +16,8 @@
         "projects projects"
     } 
     &__projects {
+        padding-bottom: 1rem;
+        overflow: hidden;
         grid-area: projects;
         margin-top: 3.5rem;
         display: grid;
@@ -24,6 +26,10 @@
         width: 100%;
         @include breakpoint(small) {
             grid-template-columns: repeat(2, 1fr);
+        }
+        @include breakpoint(medium) {
+            padding-bottom: 0;
+            overflow: initial;
         }
         @include breakpoint(large) {
             grid-template-columns: repeat(4, 1fr);

@@ -1,8 +1,6 @@
 const navMenu = document.querySelector('.nav__menu');
 const hamburger = document.querySelector('.hamburger');
 const body = document.querySelector('body');
-let mql = window.matchMedia('(max-width: 62em)');
-const links = document.querySelectorAll(".nav__itemlink");
 
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
@@ -27,6 +25,8 @@ function setHamburgerMenuState() {
 // This was another way to make the menu links accessible
 
 /*function addAriaHiddenAttr(event) {
+    let mql = window.matchMedia('(max-width: 62em)');
+    const links = document.querySelectorAll(".nav__itemlink");
     
     if ((navMenu.classList.contains("active") && event.matches) || !event.matches) {
         for (const link of links) {

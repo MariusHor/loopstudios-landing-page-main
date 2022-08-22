@@ -45,4 +45,16 @@
     width: 1px;
     height: 1px;
     white-space: nowrap;
-  }  
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  
+  .reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
