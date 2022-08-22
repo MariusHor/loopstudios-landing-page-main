@@ -12,6 +12,7 @@
   @include breakpoint(large) {
     display: none;
   }
+  
   &:focus, &:focus-visible, &:active {
     outline-offset: 0.3625rem;
     outline: 0.15rem dotted $color-white;

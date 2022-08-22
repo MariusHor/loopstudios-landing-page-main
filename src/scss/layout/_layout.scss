@@ -33,18 +33,8 @@
 
 .active {
     transform: translateY(0%);
+    transform: translateX(0%);
     opacity: 1 !important;
-}
-
-.visually-hidden {
-    position: absolute;
-    top: auto;
-    overflow: hidden;
-    clip: rect(1px 1px 1px 1px); /* IE 6/7 */
-    clip: rect(1px, 1px, 1px, 1px);
-    width: 1px;
-    height: 1px;
-    white-space: nowrap;
 }
 
 .reveal {

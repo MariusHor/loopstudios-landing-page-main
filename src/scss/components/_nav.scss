@@ -22,7 +22,6 @@
   }
 
   &__menu {
-    visibility: hidden;
     position: fixed;
     left: -100%;
     top: 0;
@@ -36,7 +35,6 @@
       padding-top: 1.5rem;
     }
     @include breakpoint(large) {
-      visibility: initial;
       transition: background 0s;
       display: flex;
       flex-direction: row;
@@ -47,7 +45,6 @@
       justify-content: end;
     }
     &.active {
-      visibility: initial;
       background-color: #000;
       left: 0;
       height: 100vh;

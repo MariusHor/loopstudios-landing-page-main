@@ -31,12 +31,14 @@ reveal(mql)
 setTimeout(() => {   window.addEventListener("scroll", reveal);}, 1000);
 
 
-const hero = document.querySelector('.hero__title');
 
+const hero = document.querySelector('.hero__title');
 function animate() {
     hero.classList.add('active')
     setTimeout(animate, 1000)
 }
 
 window.onload = animate
+
+
 

@@ -6,4 +6,8 @@ body {
     min-width: fit-content;
 }
 
-
+@media (prefers-reduced-motion) {
+    * {
+      transition: none;
+    }
+  }
