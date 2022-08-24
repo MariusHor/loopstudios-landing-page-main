@@ -3,48 +3,59 @@
 //CONTAINERS
 
 .s-container {
-    width: clamp(16rem, 87vw, 85rem);
-    margin-left: auto;
-    margin-right: auto;
+  width: clamp(16rem, 87vw, 85rem);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .header {
-    position: relative;
-    background: linear-gradient(to left bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(/src/img/mobile/image-hero.jpg);
+  position: relative;
+  background: linear-gradient(
+      to left bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(/src/img/mobile/image-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  min-height: 100vh;
+  min-width: min-content;
+  @include breakpoint(medium) {
+    background: linear-gradient(
+        to left bottom,
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url(/src/img/desktop/image-hero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    display: grid;
-    grid-template-rows: 1fr 2fr;
-    min-height: 100vh;
-    min-width: min-content;
-    @include breakpoint(medium) {
-        background: linear-gradient(to left bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(/src/img/desktop/image-hero.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        min-height: initial;
-        grid-template-rows: 1fr 2fr 1fr;
-    }
-
+    min-height: initial;
+    grid-template-rows: 1fr 2fr 1fr;
+  }
 }
 
 .overflow-hidden {
-    overflow: hidden;
+  overflow: hidden;
 }
 
-.active {
-    transform: translateY(0%);
-    transform: translateX(0%);
-    opacity: 1 !important;
-}
-
-.reveal {
-    position: relative;
-    transform: translateY(150px);
-    opacity: 0;
-    transition: 1s all ease;
-  }
-  
-  .reveal.active {
-    transform: translateY(0);
+/*.fade-in-left { 
+  -webkit-transform: translate3d(-100px,0,0);
+  transform: translate3d(-100px,0,0);
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+  @include breakpoint(medium) {
+    -webkit-transform: none;
+    transform: none;
     opacity: 1;
+    transition: none;
   }
+}
+
+.slide-right {
+  -webkit-transform: none;
+  transform: none;
+  opacity: 1;
+}
+*/

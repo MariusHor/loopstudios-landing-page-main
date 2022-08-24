@@ -1,2 +1,3 @@
-import './nav'
-import './reveal'
+import './nav';
+import './reveal';
+import './aos';

@@ -12,12 +12,14 @@
   @include breakpoint(large) {
     display: none;
   }
-  
-  &:focus, &:focus-visible, &:active {
+
+  &:focus,
+  &:focus-visible,
+  &:active {
     outline-offset: 0.3625rem;
     outline: 0.15rem dotted $color-white;
   }
-  &:hover  &__bar {
+  &:hover &__bar {
     background: $color-darkGray;
   }
   &__bar {
@@ -26,7 +28,8 @@
     width: 30px;
     height: 3.5px;
     margin: 7px auto;
-    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.72, 1.675), background $transition-primary;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.72, 1.675),
+      background $transition-primary;
     border-radius: 5px;
     @include breakpoint(large) {
       width: 35px;
@@ -36,23 +39,23 @@
   &.active &__bar:nth-child(2) {
     transform: translateY(8px) rotate(45deg);
   }
-  
+
   &.active &__bar:nth-child(3) {
     opacity: 0;
   }
-  
+
   &.active &__bar:nth-child(4) {
     transform: translateY(-8px) rotate(-45deg);
   }
-  
+
   &.active &__bar--light:nth-child(3) {
     opacity: 0;
   }
-  
+
   &.active &__bar--light:nth-child(2) {
     transform: translateY(8px) rotate(45deg);
   }
-  
+
   &.active &__bar--light:nth-child(4) {
     transform: translateY(-8px) rotate(-45deg);
   }

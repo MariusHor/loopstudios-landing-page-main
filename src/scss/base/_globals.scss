@@ -1,13 +1,20 @@
 @use "../abstracts" as *;
 
 body {
-    font-family: $ff-primary;
-    font-size: $fs-primary;
-    min-width: fit-content;
+  font-family: $ff-primary;
+  font-size: $fs-primary;
+  min-width: fit-content;
 }
 
+// Removes transitions and animations for people that choose so.
+
 @media (prefers-reduced-motion) {
-    * {
-      transition: none;
-    }
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
   }
+}

@@ -1,71 +1,71 @@
 @use "../abstracts" as *;
 
 .portfolio {
-    margin: 2rem 0 8rem;
-    max-width: 1070px;
-    display: grid;
-    gap: 4rem;
-    grid-template-areas: 
+  margin: 2rem 0 8rem;
+  max-width: 1070px;
+  display: grid;
+  gap: 4rem;
+  grid-template-areas:
     "title"
     "projects"
     "button";
+  @include breakpoint(medium) {
+    margin: 2rem 0 10rem;
+    grid-template-areas:
+      "title button"
+      "projects projects";
+  }
+  &__projects {
+    padding-bottom: 1rem;
+    overflow: hidden;
+    grid-area: projects;
+    margin-top: 3.5rem;
+    display: grid;
+    gap: 1.5rem;
+    margin: 0 auto;
+    width: 100%;
+    @include breakpoint(small) {
+      grid-template-columns: repeat(2, 1fr);
+    }
     @include breakpoint(medium) {
-        margin: 2rem 0 10rem;
-        grid-template-areas: 
-        "title button"
-        "projects projects"
-    } 
-    &__projects {
-        padding-bottom: 1rem;
-        overflow: hidden;
-        grid-area: projects;
-        margin-top: 3.5rem;
-        display: grid;
-        gap: 1.5rem;
-        margin: 0 auto;
-        width: 100%;
-        @include breakpoint(small) {
-            grid-template-columns: repeat(2, 1fr);
-        }
-        @include breakpoint(medium) {
-            padding-bottom: 0;
-            overflow: initial;
-        }
-        @include breakpoint(large) {
-            grid-template-columns: repeat(4, 1fr);
-            max-width: 1070px;
-        } 
+      padding-bottom: 0;
+      overflow: initial;
     }
-    &__btn {
-        position: relative;
-        grid-area: button;
-        justify-self: end;
-        color: $color-black;
-        text-transform: uppercase;
-        letter-spacing: 4px;
-        display: block;
-        width: fit-content;
-        margin: 0 auto;
-        border: solid 1px $color-darkGray;
-        padding: 0.9rem 2.3rem;
-        transition: color $transition-primary, background $transition-primary;
-        @include breakpoint(medium) {
-            margin: 0;
-        }
+    @include breakpoint(large) {
+      grid-template-columns: repeat(4, 1fr);
+      max-width: 1070px;
     }
-    &__btn:hover {
-        background: $color-black;
-        color: $color-white;
+  }
+  &__btn {
+    position: relative;
+    grid-area: button;
+    justify-self: end;
+    color: $color-black;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    border: solid 1px $color-darkGray;
+    padding: 0.9rem 2.3rem;
+    transition: color $transition-primary, background $transition-primary;
+    @include breakpoint(medium) {
+      margin: 0;
     }
-    &__title {
-        grid-area: title;
-        align-self: end;
-        justify-self: center;
-        @include breakpoint(medium) {
-            justify-self: start;
-        }
-        @include breakpoint(xlarge) {
-            max-width: fit-content;
-        }
+  }
+  &__btn:hover {
+    background: $color-black;
+    color: $color-white;
+  }
+  &__title {
+    grid-area: title;
+    align-self: end;
+    justify-self: center;
+    @include breakpoint(medium) {
+      justify-self: start;
     }
+    @include breakpoint(xlarge) {
+      max-width: fit-content;
+    }
+  }
 }

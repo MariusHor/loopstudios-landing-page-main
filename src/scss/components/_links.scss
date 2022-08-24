@@ -9,28 +9,32 @@ a {
   &:hover {
     color: $color-darkGray;
   }
-  &:focus, &:focus-visible, &:active {
+  &:focus,
+  &:focus-visible,
+  &:active {
     outline-offset: 0.3625rem;
     outline: 0.15rem dotted $color-white;
   }
   &::after {
     position: absolute;
-    content: '';
+    content: "";
     width: 0;
     height: 2px;
     background-color: #fff;
     left: 20%;
     bottom: -10px;
     transition: width $transition-primary;
-    }
+  }
   &:hover::after {
     width: 60%;
-    }
+  }
 }
 
 main {
-  a:focus, a:focus-visible, a:active {
+  a:focus,
+  a:focus-visible,
+  a:active {
     outline-offset: 0.3625rem;
     outline: 0.15rem dotted $color-black;
-    }
+  }
 }

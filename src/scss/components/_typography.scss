@@ -1,20 +1,19 @@
 @use "../abstracts" as *;
 
-
 .section-title {
-    font-family: $ff-secondary;
-    text-transform: uppercase;
-    font-size: 32px;
-    font-weight: 300;
-    @include breakpoint(large) {
-        font-size: 40px;
-    }
-    @include breakpoint(xlarge) {
-        font-size: 48px;
-    }
+  font-family: $ff-secondary;
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: 300;
+  @include breakpoint(large) {
+    font-size: 40px;
+  }
+  @include breakpoint(xlarge) {
+    font-size: 48px;
+  }
 }
 .section-text {
-    color: $color-darkGray;
-    font-weight: 300;
-    line-height: 1.7;
+  color: $color-darkGray;
+  font-weight: 300;
+  line-height: 1.7;
 }

@@ -19,7 +19,6 @@
     "url": "https://github.com/MariusHor/Loopstudios-landing-page/issues"
   },
   "homepage": "https://github.com/MariusHor/Loopstudios-landing-page#readme",
-
   "devDependencies": {
     "@babel/core": "^7.18.9",
     "@babel/preset-env": "^7.18.9",
@@ -42,6 +41,9 @@
     "webpack-dev-server": "^4.9.3"
   },
   "dependencies": {
+    "aos": "^3.0.0-beta.6",
+    "eslint": "^8.22.0",
+    "eslint-config-google": "^0.14.0",
     "imagemin": "^8.0.1",
     "imagemin-webp": "^7.0.0"
   }

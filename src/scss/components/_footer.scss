@@ -1,59 +1,59 @@
 @use "../abstracts" as *;
 
 .footer {
-    background: $color-black;
-    padding: 4rem 0;
-    &__container {
-        display: grid;
-        justify-items: center;
-        gap: 1rem;
-        @include breakpoint(large) {
-            grid-template-areas: 
-            "footerlogo socials"
-            "footernav copyright";
-        }
+  background: $color-black;
+  padding: 4rem 0;
+  &__container {
+    display: grid;
+    justify-items: center;
+    gap: 1rem;
+    @include breakpoint(large) {
+      grid-template-areas:
+        "footerlogo socials"
+        "footernav copyright";
     }
-    &__logo {
-        @include breakpoint(large) {
-            grid-area: footerlogo;
-            justify-self: start;
-        }
+  }
+  &__logo {
+    @include breakpoint(large) {
+      grid-area: footerlogo;
+      justify-self: start;
     }
-    &__menu {
-        margin: 1.5rem 0 2.5rem;
-        text-align: center;
-        @include breakpoint(medium) {
-            flex-direction: row;
-        }
-        @include breakpoint(large) {
-            margin: 0;
-            grid-area: footernav;
-            justify-self: start;
-        }
+  }
+  &__menu {
+    margin: 1.5rem 0 2.5rem;
+    text-align: center;
+    @include breakpoint(medium) {
+      flex-direction: row;
     }
-    &__socials {
-        display: flex;
-        gap: 1rem;
-        @include breakpoint(large) {
-            grid-area: socials;
-            align-self: end;
-            justify-self: end;
-        }
+    @include breakpoint(large) {
+      margin: 0;
+      grid-area: footernav;
+      justify-self: start;
     }
-    &__icon {
-        font-size: 24px;
+  }
+  &__socials {
+    display: flex;
+    gap: 1rem;
+    @include breakpoint(large) {
+      grid-area: socials;
+      align-self: end;
+      justify-self: end;
     }
-    &__copyright {
-        color: $color-darkGray;
-        width: fit-content;
-        text-align: center;
-        @include breakpoint(medium) {
-            text-align: initial;
-            align-self: end;
-        }
-        @include breakpoint(large) {
-            grid-area: copyright;
-            justify-self: end;
-        }
+  }
+  &__icon {
+    font-size: 24px;
+  }
+  &__copyright {
+    color: $color-darkGray;
+    width: fit-content;
+    text-align: center;
+    @include breakpoint(medium) {
+      text-align: initial;
+      align-self: end;
     }
+    @include breakpoint(large) {
+      grid-area: copyright;
+      justify-self: end;
+    }
+  }
 }
