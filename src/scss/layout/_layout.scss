@@ -40,12 +40,12 @@
   overflow: hidden;
 }
 
-/*.fade-in-left { 
+.fade-in-left { 
   -webkit-transform: translate3d(-100px,0,0);
   transform: translate3d(-100px,0,0);
   opacity: 0;
   transition: 0.4s ease-in-out;
-  @include breakpoint(medium) {
+  @include breakpoint(large) {
     -webkit-transform: none;
     transform: none;
     opacity: 1;
@@ -58,4 +58,4 @@
   transform: none;
   opacity: 1;
 }
-*/
+
