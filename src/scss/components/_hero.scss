@@ -19,15 +19,15 @@
     font-weight: 300;
     text-transform: uppercase;
     font-family: $ff-secondary;
-    max-width: 34rem;
+    max-width: 30rem;
     height: fit-content;
     @include breakpoint(xsmall) {
       font-size: 40px;
       padding-right: 3rem;
     }
     @include breakpoint(medium) {
-      font-size: 58px;
-      max-width: 43rem;
+      font-size: 45px;
+      max-width: 40rem;
     }
     @include breakpoint(xlarge) {
       font-size: 72px;
