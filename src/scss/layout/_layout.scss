@@ -22,7 +22,7 @@
   grid-template-rows: 1fr 2fr;
   min-height: 100vh;
   min-width: min-content;
-  @include breakpoint(medium) {
+  @include breakpoint(large) {
     background: linear-gradient(
         to left bottom,
         rgba(0, 0, 0, 0.1),
@@ -31,7 +31,6 @@
       url(/src/img/desktop/image-hero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: initial;
     grid-template-rows: 1fr 2fr 1fr;
   }
 }
@@ -40,11 +39,11 @@
   overflow: hidden;
 }
 
-.fade-in-left { 
+.nav__item-reveal { 
   -webkit-transform: translate3d(-100px,0,0);
   transform: translate3d(-100px,0,0);
   opacity: 0;
-  transition: 0.4s ease-in-out;
+
   @include breakpoint(large) {
     -webkit-transform: none;
     transform: none;
@@ -59,3 +58,19 @@
   opacity: 1;
 }
 
+.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.reveal-left {
+  transition: 0.6s ease-in-out;
+  opacity: 0;
+  transform: translateX(-20%);
+}
+
+.fade-in-left {
+  opacity: 1;
+  transform: translateX(0);
+}

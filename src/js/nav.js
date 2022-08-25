@@ -29,7 +29,7 @@ function setHamburgerMenuState() {
 }
 
 function reveal() {
-  const reveals = document.querySelectorAll('.fade-in-left');
+  const reveals = document.querySelectorAll('.nav__item-reveal');
   for (let i = 0; i < reveals.length; i++) {
     reveals.forEach((reveal, index) => {
       if (navMenu.classList.contains('active')) {
@@ -44,7 +44,6 @@ function reveal() {
     });
   }
 }
-
 
 
 // I prefer this over visibility hidden
