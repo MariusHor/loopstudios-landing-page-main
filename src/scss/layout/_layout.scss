@@ -3,9 +3,13 @@
 //CONTAINERS
 
 .s-container {
+  padding: 0 0.5rem;
   width: clamp(16rem, 87vw, 85rem);
   margin-left: auto;
   margin-right: auto;
+  @media screen and (min-width: 280px ) {
+    padding: 0;
+  }
 }
 
 .header {
@@ -33,6 +37,10 @@
     background-size: cover;
     grid-template-rows: 1fr 2fr 1fr;
   }
+  @media screen and (max-height: 32em) {
+    gap: 1rem;
+    grid-template-rows: 0.5fr 2fr;
+  }
 }
 
 .overflow-hidden {
@@ -40,6 +48,7 @@
 }
 
 .nav__item-reveal { 
+  transition: transform 0.6s cubic-bezier(0.175, 0.285, 0.72, 1.375), opacity 0.6s ease-in-out ;
   -webkit-transform: translate3d(-100px,0,0);
   transform: translate3d(-100px,0,0);
   opacity: 0;
@@ -65,9 +74,9 @@
 
 
 .reveal-left {
-  transition: 0.6s ease-in-out;
+  transition: 1s ease-in-out ;
   opacity: 0;
-  transform: translateX(-20%);
+  transform: translateX(-30%);
 }
 
 .fade-in-left {

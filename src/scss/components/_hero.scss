@@ -2,7 +2,10 @@
 
 .hero {
   @include breakpoint(medium) {
-    padding: 2rem 0;
+    padding-bottom: 1rem;
+  }
+  @include breakpoint(large) {
+    align-self: center;
   }
   &__title {
     opacity: 0;

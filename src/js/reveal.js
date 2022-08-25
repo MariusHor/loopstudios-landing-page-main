@@ -14,7 +14,7 @@ function createObserver() {
 
   const options = {
     root: null,
-    rootMargin: '0px',
+    rootMargin: '50px',
     threshold: 0.4,
   };
 
