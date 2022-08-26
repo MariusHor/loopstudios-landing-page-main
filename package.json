@@ -19,6 +19,9 @@
     "url": "https://github.com/MariusHor/Loopstudios-landing-page/issues"
   },
   "homepage": "https://github.com/MariusHor/Loopstudios-landing-page#readme",
+  "browserslist": [
+    "last 3 versions"
+ ],
   "devDependencies": {
     "@babel/core": "^7.18.9",
     "@babel/preset-env": "^7.18.9",
@@ -29,9 +32,9 @@
     "html-loader": "^4.1.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.1",
-    "optimize-css-assets-webpack-plugin": "^6.0.1",
     "postcss": "^8.4.14",
     "postcss-loader": "^7.0.1",
+    "postcss-preset-env": "^7.8.0",
     "sass": "^1.53.0",
     "sass-loader": "^13.0.2",
     "style-loader": "^3.3.1",
@@ -42,9 +45,10 @@
   },
   "dependencies": {
     "aos": "^3.0.0-beta.6",
+    "autoprefixer": "^10.4.8",
     "eslint": "^8.22.0",
     "eslint-config-google": "^0.14.0",
-    "imagemin": "^8.0.1",
-    "imagemin-webp": "^7.0.0"
+    "postcss-import": "^14.1.0",
+    "sugarss": "^4.0.1"
   }
 }

@@ -36,8 +36,8 @@
     gap: 1rem;
     @include breakpoint(large) {
       grid-area: socials;
-      align-self: end;
-      justify-self: end;
+      align-self: flex-end;
+      justify-self: flex-end;
     }
   }
   &__icon {
@@ -49,11 +49,11 @@
     text-align: center;
     @include breakpoint(medium) {
       text-align: initial;
-      align-self: end;
+      align-self: flex-end;
     }
     @include breakpoint(large) {
       grid-area: copyright;
-      justify-self: end;
+      justify-self: flex-end;
     }
   }
 }

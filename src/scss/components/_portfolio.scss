@@ -39,7 +39,7 @@
   &__btn {
     position: relative;
     grid-area: button;
-    justify-self: end;
+    justify-self: flex-end;
     color: $color-black;
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -59,7 +59,7 @@
   }
   &__title {
     grid-area: title;
-    align-self: end;
+    align-self: flex-end;
     justify-self: center;
     @include breakpoint(medium) {
       justify-self: start;

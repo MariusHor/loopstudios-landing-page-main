@@ -39,11 +39,11 @@
       transition: background 0s;
       display: flex;
       flex-direction: row;
-      justify-self: end;
+      justify-self: flex-end;
       height: initial;
       padding: initial;
       position: initial;
-      justify-content: end;
+      justify-content: flex-end;
     }
     &.active {
       background-color: #000;

@@ -7,7 +7,7 @@
   background: none;
   border: 0;
   cursor: pointer;
-  justify-self: end;
+  justify-self: flex-end;
   z-index: 1000;
   @include breakpoint(large) {
     display: none;

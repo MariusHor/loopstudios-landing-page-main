@@ -62,7 +62,7 @@
 }
 
 .slide-right {
-  -webkit-transform: none;
+
   transform: none;
   opacity: 1;
 }
@@ -73,13 +73,15 @@
 }
 
 
-.reveal-left {
-  transition: 1s ease-in-out ;
-  opacity: 0;
+.fade-in-left {
+  -webkit-transform: none;
   transform: translateX(-30%);
+  opacity: 0;
+  transition: 1s ease-in-out ;
 }
 
-.fade-in-left {
-  opacity: 1;
+.reveal {
+  -webkit-transform: none;
   transform: translateX(0);
+  opacity: 1;
 }

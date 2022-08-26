@@ -34,11 +34,11 @@ function reveal() {
     reveals.forEach((reveal, index) => {
       if (navMenu.classList.contains('active')) {
         setTimeout(() => {
-          reveal.classList.add('slide-right');
+          reveal.classList.add('reveal');
         }, index * 150);
       } else {
         setTimeout(() => {
-          reveal.classList.remove('slide-right');
+          reveal.classList.remove('reveal');
         }, index * 150);
       }
     });

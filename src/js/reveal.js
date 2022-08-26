@@ -4,7 +4,7 @@
 let elements;
 
 window.addEventListener('load', (event) => {
-  elements = document.querySelector('.reveal-left');
+  elements = document.querySelector('.fade-in-left');
 
   createObserver();
 }, false);
@@ -23,10 +23,10 @@ function createObserver() {
   function handleIntersect(entries) {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('fade-in-left');
+        entry.target.classList.add('reveal');
         return;
       } else {
-        entry.target.classList.remove('fade-in-left');
+        entry.target.classList.remove('reveal');
       }
     });
   }
