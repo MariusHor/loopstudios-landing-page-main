@@ -13,10 +13,7 @@ hamburger.addEventListener('click', () => {
     body.classList.toggle('overflow-hidden');
     setHamburgerMenuState();
     addAriaHiddenAttr(mql);
-    setTimeout(() => {
-      reveal();
-    }, 100);
-  }, 300);
+  }, 200);
 });
 
 
@@ -25,23 +22,6 @@ function setHamburgerMenuState() {
     hamburger.setAttribute('aria-expanded', 'true');
   } else if (!navMenu.classList.contains('active')) {
     hamburger.setAttribute('aria-expanded', 'false');
-  }
-}
-
-function reveal() {
-  const reveals = document.querySelectorAll('.nav__item-reveal');
-  for (let i = 0; i < reveals.length; i++) {
-    reveals.forEach((reveal, index) => {
-      if (navMenu.classList.contains('active')) {
-        setTimeout(() => {
-          reveal.classList.add('reveal');
-        }, index * 150);
-      } else {
-        setTimeout(() => {
-          reveal.classList.remove('reveal');
-        }, index * 150);
-      }
-    });
   }
 }
 

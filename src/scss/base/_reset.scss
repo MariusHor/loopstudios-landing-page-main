@@ -9,43 +9,42 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-  margin: 0;
-  padding: 0;
 }
 
-// Removing list styles on ul, ol elements with a list role, which suggests
-// default styling will be removed
-ul[role="list"],
-ol[role="list"],
+// Reseting margins and padding. Adding the overflow-wrap property to break words.
+
+* {
+  margin: 0;
+  padding: 0;
+  overflow-wrap: break-word;
+}
+
+// Setting core body defaults
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Lists default styling will be removed
+
 ul,
 ol {
   list-style: none;
 }
 
-// Setting core root defaults
-html:focus-within {
-  scroll-behavior: smooth;
-}
-
-// Setting core body defaults
-body {
-  text-rendering: optimizeSpeed;
-}
-
-// A elements that don't have a class get default styles
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
+// Anchor elements get default styles
 
 a {
   text-decoration: none;
 }
 
 // Make images easier to work with
-img,
-picture {
-  max-width: 100%;
+img, picture, video, canvas, svg {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 // Inherit fonts for inputs and buttons
@@ -55,4 +54,22 @@ textarea,
 select {
   color: inherit;
   font: inherit;
+}
+
+// Remove all animations, transitions and smooth scroll for people that prefer not to see them 
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }

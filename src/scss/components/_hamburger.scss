@@ -25,19 +25,19 @@
   &__bar {
     background: #fff;
     display: block;
-    width: 30px;
-    height: 3.5px;
-    margin: 7px auto;
+    width: 1.875rem;
+    height: 0.2rem;
+    margin: 0.5rem auto;
     transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.72, 1.675),
       background $transition-primary;
-    border-radius: 5px;
+    border-radius: 0.325rem;
     @include breakpoint(large) {
-      width: 35px;
-      height: 4px;
+      width: 2.25rem;
+      height: 0.25rem;
     }
   }
   &.active &__bar:nth-child(2) {
-    transform: translateY(8px) rotate(45deg);
+    transform: translateY(0.5rem) rotate(45deg);
   }
 
   &.active &__bar:nth-child(3) {
@@ -45,18 +45,6 @@
   }
 
   &.active &__bar:nth-child(4) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-
-  &.active &__bar--light:nth-child(3) {
-    opacity: 0;
-  }
-
-  &.active &__bar--light:nth-child(2) {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  &.active &__bar--light:nth-child(4) {
-    transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-0.5rem) rotate(-45deg);
   }
 }

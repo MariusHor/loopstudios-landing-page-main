@@ -4,16 +4,16 @@
   width: fit-content;
   z-index: 1000;
   &__img {
-    max-width: 150px;
+    max-width: 9.375rem;
     height: auto;
     @include breakpoint(small) {
-      max-width: 165px;
+      max-width: 10.375rem;
     }
     @include breakpoint(medium) {
-      max-width: 175px;
+      max-width: 11rem;
     }
     @include breakpoint(large) {
-      max-width: 192px;
+      max-width: 12rem;
     }
   }
 }

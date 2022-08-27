@@ -7,7 +7,7 @@
   width: clamp(16rem, 87vw, 85rem);
   margin-left: auto;
   margin-right: auto;
-  @media screen and (min-width: 280px ) {
+  @media screen and (min-width: 17.5rem ) {
     padding: 0;
   }
 }
@@ -45,43 +45,4 @@
 
 .overflow-hidden {
   overflow: hidden;
-}
-
-.nav__item-reveal { 
-  transition: transform 0.6s cubic-bezier(0.175, 0.285, 0.72, 1.375), opacity 0.6s ease-in-out ;
-  -webkit-transform: translate3d(-100px,0,0);
-  transform: translate3d(-100px,0,0);
-  opacity: 0;
-
-  @include breakpoint(large) {
-    -webkit-transform: none;
-    transform: none;
-    opacity: 1;
-    transition: none;
-  }
-}
-
-.slide-right {
-
-  transform: none;
-  opacity: 1;
-}
-
-.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
-.fade-in-left {
-  -webkit-transform: none;
-  transform: translateX(-30%);
-  opacity: 0;
-  transition: 1s ease-in-out ;
-}
-
-.reveal {
-  -webkit-transform: none;
-  transform: translateX(0);
-  opacity: 1;
 }

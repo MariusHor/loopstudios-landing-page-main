@@ -1,13 +1,13 @@
 @use "../abstracts" as *;
 
 .showcase {
-  margin: 6rem 0;
+  margin: 5rem 0;
   @extend %center;
   gap: 3rem;
   position: relative;
   place-items: center;
   @include breakpoint(medium) {
-    max-width: 1070px;
+    max-width: 66.875rem;
   }
   @include breakpoint(xlarge) {
     margin: 6rem 0 10rem;
@@ -16,7 +16,7 @@
     height: auto;
   }
   &__img-wrapper {
-    max-width: 400px;
+    max-width: 25rem;
     @include breakpoint(xlarge) {
       max-width: initial;
       place-self: baseline;
@@ -24,7 +24,7 @@
   }
   &__info {
     @include breakpoint(xlarge) {
-      max-width: 650px;
+      max-width: 40.625rem;
       position: absolute;
       background: $color-white;
       padding: 5rem;
@@ -34,21 +34,21 @@
     }
   }
   &__title {
-    margin-bottom: 25px;
+    margin-bottom: 1.575rem;
     text-align: center;
     padding-right: 1rem;
     @include breakpoint(large) {
-      font-size: 40px !important;
+      font-size: 2.5rem !important;
     }
     @include breakpoint(xlarge) {
       padding-right: 1.2rem;
       text-align: start;
-      font-size: 48px !important;
+      font-size: 3rem !important;
     }
   }
   &__text {
     padding: 0 1rem;
-    max-width: 450px;
+    max-width: 28.125rem;
     text-align: center;
     margin: 0 auto;
     @include breakpoint(xlarge) {

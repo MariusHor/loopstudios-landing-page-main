@@ -2,9 +2,9 @@
 
 .portfolio {
   margin: 2rem 0 8rem;
-  max-width: 1070px;
+  max-width: 66.875rem;
   display: grid;
-  gap: 4rem;
+  gap: 2rem;
   grid-template-areas:
     "title"
     "projects"
@@ -16,7 +16,7 @@
       "projects projects";
   }
   &__projects {
-    padding-bottom: 1rem;
+    padding-bottom: 1.5rem;
     overflow: hidden;
     grid-area: projects;
     margin-top: 3.5rem;
@@ -33,7 +33,7 @@
     }
     @include breakpoint(large) {
       grid-template-columns: repeat(4, 1fr);
-      max-width: 1070px;
+      max-width: 66.875rem;
     }
   }
   &__btn {
@@ -42,11 +42,11 @@
     justify-self: flex-end;
     color: $color-black;
     text-transform: uppercase;
-    letter-spacing: 4px;
+    letter-spacing: 0.25rem;
     display: block;
     width: fit-content;
     margin: 0 auto;
-    border: solid 1px $color-darkGray;
+    border: solid 0.06rem $color-darkGray;
     padding: 0.9rem 2.3rem;
     transition: color $transition-primary, background $transition-primary;
     @include breakpoint(medium) {
