@@ -1,5 +1,5 @@
 <p text align="center">
-    <img src="/src/img/logo.svg">
+    <img src="/src/img/logo-mh-dev.svg">
 <p>
 
 # Loopstudios Landing Page
