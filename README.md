@@ -6,17 +6,22 @@
 
 ### 👋 Hello there 
 
-This is a Landing Page project that I've build using the designs from the <a href="https://frontendmentor.io">FrontendMentor<a> website. It was an amazing project that made me improve greatly overall. Here you can see how I built it and what kind of tools I've used in this process.
+This is a Landing Page project that I've build using the designs from the <a href="https://frontendmentor.io">FrontendMentor<a> website. I believe that it was a helpful experience that gave me more practice working with Css and Javascript.
 
 ## 👨‍💻 Table of contents
 
 - [Overview](#-overview)
+  - [Screenshot](#screenshot)
   - [Live website](#live-website)
 - [My process](#-my-process)
   - [Built with](#built-with)
 - [Contact](#-contact-me)
 
 ## 🔭 Overview
+
+### Screenshot
+
+![](./src/design/loopstudios-landing-page-preview.png)
 
 ### Live website
 
